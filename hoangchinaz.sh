@@ -2,7 +2,7 @@ yum install nano -y
 systemctl stop firewalld
 systemctl disable firewalld
 clear
-read -p " NODE ID vless : " node_id1
+read -p " NODE ID sock : " node_id1
   [ -z "${node_id1}" ] && node_id1=0
   
 
@@ -108,9 +108,9 @@ Nodes:
       ApiHost: "https://xmtunnel.com"
       ApiKey: "1122334455667788"
       NodeID: $node_id1
-      NodeType: V2ray # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
+      NodeType: Shadowsocks # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
-      EnableVless: true # Enable Vless for V2ray Type
+      EnableVless: false # Enable Vless for V2ray Type
       EnableXTLS: false # Enable XTLS for V2ray and Trojan
       SpeedLimit: 0 # Mbps, Local settings will replace remote settings, 0 means disable
       DeviceLimit: 0 # Local settings will replace remote settings, 0 means disable
